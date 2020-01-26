@@ -81,6 +81,7 @@ class Dog
     else
       pup = self.create(name: name, breed: breed)
     end
+    p pup
     pup
   end
 end
