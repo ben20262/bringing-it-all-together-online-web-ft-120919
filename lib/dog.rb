@@ -75,7 +75,7 @@ class Dog
       FROM dogs
       WHERE name = ? AND breed = ?
     SQL
-    row = DB[:conn].execute(sql, name, breed)
+    row = DB[:conn].execute(sql, name, breed).flatten
     if !row.empty?
       pup = self.new(id: row[0], name: row[1], breed: row[2])
     else
